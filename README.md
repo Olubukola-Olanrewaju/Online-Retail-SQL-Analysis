@@ -1,5 +1,8 @@
 # Online Retail SQL Analysis
 
+## Project Type
+End-to-End SQL Data Analysis Project
+
 ## Project Objective
 
 The goal of this project is to analyze retail transaction data to uncover sales patterns, customer behavior, and business opportunities using SQL.
@@ -117,7 +120,7 @@ The queries are structured into:
 
  ## Top Products by Revenue
 
-![Top Products](https://github.com/Olubukola-Olanrewaju/Online-Retail-SQL-Analysis/blob/main/top_products.png)
+ ![Top Products](top_products.png)(https://github.com/Olubukola-Olanrewaju/Online-Retail-SQL-Analysis/blob/main/top_products.png)
 
 ## Customer Segmentation
 
