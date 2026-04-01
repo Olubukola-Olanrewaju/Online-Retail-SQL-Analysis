@@ -120,7 +120,7 @@ The queries are structured into:
 
  ## Top Products by Revenue
 
- ![Top Products](top_products.png)(https://github.com/Olubukola-Olanrewaju/Online-Retail-SQL-Analysis/blob/main/top_products.png)
+ ![Top Products](top_products.png)
 
 ## Customer Segmentation
 
