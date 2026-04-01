@@ -117,11 +117,11 @@ The queries are structured into:
 
  ## Top Products by Revenue
 
-![Top Products] (https://github.com/Olubukola-Olanrewaju/Online-Retail-SQL-Analysis/blob/main/top_products.png)
+![Top Products](https://github.com/Olubukola-Olanrewaju/Online-Retail-SQL-Analysis/blob/main/top_products.png)
 
 ## Customer Segmentation
 
-![Customer Segmentation]([customer_segmentation.png](https://github.com/Olubukola-Olanrewaju/Online-Retail-SQL-Analysis/blob/main/Customer_Segmentation.png))
+![Customer Segmentation](https://github.com/Olubukola-Olanrewaju/Online-Retail-SQL-Analysis/blob/main/Customer_Segmentation.png)
 
 ## Conclusion
 
