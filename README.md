@@ -72,6 +72,10 @@ Top Customers:
 * The United Kingdom is the primary market
 * Sales are highly seasonal (December peak)
 
+ ## Top Products by Revenue
+
+![Top Products](top_products.png)
+
 ## Business Recommendations
 
 * Focus retention strategies on high-value customers
