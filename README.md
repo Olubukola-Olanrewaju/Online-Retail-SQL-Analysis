@@ -1,19 +1,24 @@
 # Online Retail SQL Analysis
 
-## Project Overview
+## Project Objective
 
-This project analyzes an online retail dataset using SQL.
-The goal is to clean raw transactional data and extract meaningful business insights.
+The goal of this project is to analyze retail transaction data to uncover sales patterns, customer behavior, and business opportunities using SQL.
 
-## Dataset Description
+## Business Questions
 
-The dataset contains:
+- Which products generate the most revenue?
+- Who are the highest value customers?
+- Which countries drive the most sales?
+- Is there any seasonal trend in sales?
 
-* Invoice numbers
-* Product details
-* Customer IDs
-* Quantity and price
-* Country information
+## SQL Skills Demonstrated
+
+- Data cleaning
+- Filtering and conditional logic
+- Aggregation (SUM, COUNT)
+- Grouping and sorting
+- Case statements for segmentation
+- Date formatting and time analysis
 
 ## Data Cleaning Process
 
@@ -78,7 +83,7 @@ Top Customers:
 
 ## Customer Segmentation
 
-![Customer Segmentation](customer_segmentation.png)
+![Customer Segmentation]([customer_segmentation.png](https://github.com/Olubukola-Olanrewaju/Online-Retail-SQL-Analysis/blob/main/Customer_Segmentation.png))
 
 ## Business Recommendations
 
