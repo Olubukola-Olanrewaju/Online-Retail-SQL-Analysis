@@ -1,0 +1,71 @@
+-- ========================================
+-- ONLINE RETAIL SQL ANALYSIS PROJECT
+-- ========================================
+
+-- 1. DATA CLEANING
+-- SELECT 
+    COUNT(*) AS total_rows,
+    SUM(CASE WHEN InvoiceNo IS NULL OR InvoiceNo = '' THEN 1 ELSE 0 END) AS missing_invoice,
+    SUM(CASE WHEN StockCode IS NULL OR StockCode = '' THEN 1 ELSE 0 END) AS missing_stockcode,
+    SUM(CASE WHEN Description IS NULL OR Description = '' THEN 1 ELSE 0 END) AS missing_description,
+    SUM(CASE WHEN Quantity IS NULL THEN 1 ELSE 0 END) AS missing_quantity,
+    SUM(CASE WHEN InvoiceDate IS NULL OR InvoiceDate = '' THEN 1 ELSE 0 END) AS missing_invoicedate,
+    SUM(CASE WHEN UnitPrice IS NULL THEN 1 ELSE 0 END) AS missing_unitprice,
+    SUM(CASE WHEN CustomerID IS NULL OR CustomerID = '' THEN 1 ELSE 0 END) AS missing_customerid,
+    SUM(CASE WHEN Country IS NULL OR Country = '' THEN 1 ELSE 0 END) AS missing_country
+FROM online_retail.online_retail;
+
+-- 2. CREATE CLEAN VIEW
+--CREATE OR REPLACE VIEW online_retail.online_retail_clean AS
+SELECT *
+FROM online_retail.online_retail
+WHERE Description IS NOT NULL
+  AND Description != ''
+  AND Quantity > 0
+  AND InvoiceNo NOT LIKE 'C%'
+  AND CustomerID IS NOT NULL
+  AND CustomerID != '';
+
+
+-- 3. TOP PRODUCTS
+--SELECT Description,
+       SUM(Quantity) AS total_quantity_sold,
+       SUM(Quantity * UnitPrice) AS total_sales_amount
+FROM online_retail.online_retail_clean
+GROUP BY Description
+ORDER BY total_quantity_sold DESC
+LIMIT 10;
+
+-- 4. CUSTOMER SEGMENTATION
+--SELECT 
+CustomerID,
+SUM(Quantity * UnitPrice) AS total_spent,
+CASE 
+    WHEN SUM(Quantity * UnitPrice) >= 5000 THEN 'High Value'
+    WHEN SUM(Quantity * UnitPrice) BETWEEN 2000 AND 4999 THEN 'Mid Value'
+    ELSE 'Low Value'
+END AS customer_segment
+FROM online_retail.online_retail_clean
+GROUP BY CustomerID
+ORDER BY total_spent DESC;
+
+-- 5. COUNTRY ANALYSIS
+--SELECT Country,
+       COUNT(DISTINCT InvoiceNo) AS total_orders,
+       SUM(Quantity) AS total_units,
+       SUM(Quantity * UnitPrice) AS total_sales
+FROM online_retail.online_retail_clean
+GROUP BY Country
+ORDER BY total_sales DESC
+LIMIT 10;
+
+
+-- 6. YEAR_MONTH SALES
+--SELECT 
+DATE_FORMAT(InvoiceDate, '%Y-%m') AS ym,
+SUM(Quantity * UnitPrice) AS total_sales,
+SUM(Quantity) AS total_units,
+COUNT(DISTINCT InvoiceNo) AS total_orders
+FROM online_retail.online_retail_clean
+GROUP BY ym
+ORDER BY ym;
