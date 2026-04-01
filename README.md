@@ -124,8 +124,7 @@ The queries are structured into:
 
 ## Customer Segmentation
 
-![Customer Segmentation](https://github.com/Olubukola-Olanrewaju/Online-Retail-SQL-Analysis/blob/main/Customer_Segmentation.png)
-
+![Customer Segmentation](customer_segmentation.png)
 ## Conclusion
 
 This project shows how SQL can be used to clean data and generate real business insights from raw transactional data.
