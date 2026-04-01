@@ -31,7 +31,7 @@ The goal of this project is to analyze retail transaction data to uncover sales 
 - Case statements for segmentation
 - Date formatting and time analysis
 
-## ## Project Workflow
+## Project Workflow
 
 * Removed records with missing product descriptions
 * Removed records with missing customer IDs
