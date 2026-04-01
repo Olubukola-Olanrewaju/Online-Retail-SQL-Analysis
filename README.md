@@ -11,6 +11,14 @@ The goal of this project is to analyze retail transaction data to uncover sales 
 - Which countries drive the most sales?
 - Is there any seasonal trend in sales?
 
+ ## The dataset contains:
+
+-Invoice numbers
+-Product details
+-Customer IDs
+-Quantity and price
+-Country information
+
 ## SQL Skills Demonstrated
 
 - Data cleaning
@@ -20,7 +28,7 @@ The goal of this project is to analyze retail transaction data to uncover sales 
 - Case statements for segmentation
 - Date formatting and time analysis
 
-## Data Cleaning Process
+## ## Project Workflow
 
 * Removed records with missing product descriptions
 * Removed records with missing customer IDs
@@ -72,10 +80,40 @@ Top Customers:
 
 ## Key Insights
 
-* A small number of products drive most revenue
+* A small number of products generate the majority of revenue
 * High-value customers contribute significantly to total sales
-* The United Kingdom is the primary market
-* Sales are highly seasonal (December peak)
+* The United Kingdom is the dominant market
+* Some countries show bulk purchasing behavior
+* Sales are highly seasonal, with peak performance in December
+
+* ## Business Recommendations
+
+* Focus retention strategies on high-value customers
+* Promote top-performing products to increase revenue
+* Expand marketing efforts to international markets
+* Prepare inventory ahead of December peak periods
+* Review low-performing products for improvement or removal
+
+* ## SQL Queries
+
+All SQL queries used for this analysis are available in:
+
+* online_retail_analysis.sql
+
+The queries are structured into:
+
+* Data cleaning
+* Feature creation
+* Product analysis
+* Customer segmentation
+* Country analysis
+* Time-based analysis
+
+## Tools Used
+
+* MySQL Workbench
+* SQL
+
 
  ## Top Products by Revenue
 
@@ -84,19 +122,6 @@ Top Customers:
 ## Customer Segmentation
 
 ![Customer Segmentation]([customer_segmentation.png](https://github.com/Olubukola-Olanrewaju/Online-Retail-SQL-Analysis/blob/main/Customer_Segmentation.png))
-
-## Business Recommendations
-
-* Focus retention strategies on high-value customers
-* Promote top-performing products to increase revenue
-* Expand marketing efforts to international markets
-* Prepare inventory ahead of December peak periods
-* Review low-performing products for improvement or removal
-
-## Tools Used
-
-* MySQL Workbench
-* SQL
 
 ## Conclusion
 
